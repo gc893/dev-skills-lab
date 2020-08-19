@@ -35,15 +35,15 @@ function showAllSkills(req, res, next) {
   }
 
   function editSkill(req, res, next) {
-    const value = Skills.getOne(req.params.id)
     res.render('skills/edit', {
-      skill: value,
+      skill: Skills.getOne(req.params.id),
       title: 'Developer Skills'});
   }
   
   function updateSkill(req, res, next) {
-    req.body.id = req.params.id;
+    req.body.id = parseInt(req.params.id);
     req.body.done = false;
+    console.log('body', req.body);
     Skills.updateOne(req.params.id, req.body);
     console.log(Skills.getOne(req.params.id))
     res.redirect('/skills');

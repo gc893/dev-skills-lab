@@ -2,7 +2,7 @@
 <html>
   <%- include("../partials/header.ejs") %>
   <body>
-    <h1 class='pagetitle'>Edit To-do</h1>
+    <h1 class='pagetitle'>Edit Skill</h1>
     <form action="/skills/<%= skill.id %>?_method=PUT" method="POST" class='content'>
         <input value="<%= skill.skill %>" type="text" name="skill">
         <button type="submit">Save Skill</button>

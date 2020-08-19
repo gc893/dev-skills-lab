@@ -35,4 +35,5 @@ function deleteOne(id) {
 function updateOne(reqID, value) {
     const idx = skills.findIndex(skill => skill.id === parseInt(reqID));
     skills.splice(idx,1, value)
+    console.log(value);
 }
