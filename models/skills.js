@@ -28,11 +28,11 @@ function createOne(skill) {
 }
 
 function deleteOne(id) {
-    const idx = skills.find(skill => skill.id === id);
+    const idx = skills.findIndex(skill => skill.id === parseInt(id));
     skills.splice(idx,1)
 }
 
-function updateOne(id, value) {
-    const idx = skills.find(skill => skill.id === id);
+function updateOne(reqID, value) {
+    const idx = skills.findIndex(skill => skill.id === parseInt(reqID));
     skills.splice(idx,1, value)
 }

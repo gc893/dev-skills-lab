@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>Edit To-do</h1>
+    <form action="/skills/<%= skill.id %>?_method=PUT" method="POST">
+        <input value="<%= skill.skill %>" type="text" name="skill">
+        <button type="submit">Save Skill</button>
+    </form>
+  </body>
+</html>
