@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= skill.skill %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
+  <%- include("../partials/header.ejs") %>
   <body>
-    <h1><%= skill.id %></h1>
-    <h3><%= skill.skill %></h3>
-    <h3><%= skill.done %></h3>
-    <a href="<%= skill.id%>/edit">Edit Skill</a>
+    <h1 class='pagetitle'> <%= skill.id %> </h1>
+    <div class='content'></div>
+      <h3><%= skill.skill %></h3>
+      <h3><%= skill.done %></h3>
+      <a href="<%= skill.id%>/edit">Edit Skill</a>
+    </div>
   </body>
 </html>

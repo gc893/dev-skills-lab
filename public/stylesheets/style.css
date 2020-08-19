@@ -1,12 +1,17 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  margin: 5em;
+}
+
+.pagetitle {
+  margin: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid gainsboro;
+}
+
+.delForm {
+  display: inline-flex;
 }
 
 a {
   color: #00B7FF;
-}
-
-.delForm, .delBtn {
-  display: inline-block;
 }

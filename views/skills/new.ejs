@@ -1,12 +1,9 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
+  <%- include("../partials/header.ejs") %>
   <body>
-    <h1><%= title %></h1>
-    <form action="/skills" method="POST">
+    <h1 class='pagetitle'><%= title %></h1>
+    <form action="/skills" method="POST" class='content'>
         <input type="text" name="skill">
         <button type="submit">Add Skill</button>
     </form>

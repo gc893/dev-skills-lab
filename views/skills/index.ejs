@@ -1,17 +1,15 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
+  <%- include("../partials/header.ejs") %>
   <body>
-    <h1><%= title %></h1>
-    <ul>
+    <h1 class='pagetitle'><%= title %></h1>
+    <ul class='content'>
     <% skills.forEach(el => { %>
-      <form action="/skills/<%= el.id %>?_method=DELETE" method="POST" class="delForm">
-        <button class="delBtn" type="submit">X</button>
-    </form>
-      <li> <a href="skills/<%= el.id%>"><%= el.skill %></a>
+      <li> 
+        <form action="/skills/<%= el.id %>?_method=DELETE" method="POST" class="delForm">
+          <button class="delBtn" type="submit">X</button>
+      </form>
+        <a href="skills/<%= el.id%>"><%= el.skill %></a>
       -
       <%= el.done %>
       </li>

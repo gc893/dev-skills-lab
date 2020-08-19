@@ -29,7 +29,8 @@ function showAllSkills(req, res, next) {
   function showSkill(req, res, next) {
     console.log(Skills.getOne(req.params.id))
     res.render('skills/show', {
-          skill: Skills.getOne(req.params.id)
+          skill: Skills.getOne(req.params.id),
+          title: 'Developer Skills'
         });
   }
 
@@ -44,6 +45,7 @@ function showAllSkills(req, res, next) {
     req.body.id = req.params.id;
     req.body.done = false;
     Skills.updateOne(req.params.id, req.body);
+    console.log(Skills.getOne(req.params.id))
     res.redirect('/skills');
   }
 
